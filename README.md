@@ -23,7 +23,10 @@
 ![遊戲主畫面](screenshot/game_homescreen.png)
 
 ### 遊戲遊玩演示視頻
-**注意**: GitHub 不支援直接播放 .mov 格式視頻，請下載查看：[gameplay.mov](screenshot/gameplay.mov)
+
+<video src="screenshot/gameplay.mp4" controls width="800">
+  您的瀏覽器不支援視頻播放。請下載查看：<a href="screenshot/gameplay.mp4">gameplay.mp4</a>
+</video>
 
 ### IoTtalk 設置截圖
 - **Device Model 設置**: ![IoTtalk Device Model](screenshot/iottalk_model.png)
@@ -204,7 +207,7 @@ python3 test_tilt_data.py
 在報告或展示時，建議包含以下內容：
 
 1. **遊戲主畫面截圖** (`screenshot/game_homescreen.png`) - 展示遊戲界面和 UI 設計
-2. **遊戲遊玩視頻** (`screenshot/gameplay.mov`) - 展示實際操作效果和體感控制
+2. **遊戲遊玩視頻** (`screenshot/gameplay.mp4`) - 展示實際操作效果和體感控制
 3. **IoTtalk Device Model** (`screenshot/iottalk_model.png`) - 展示 IoTtalk 設置和配置
 4. **Global Function 設置** (`screenshot/sky_fighter_function.png`) - 展示數據處理函數配置
 5. **終端機輸出**: 顯示「Register successfully」和數據接收訊息，證明連線成功
