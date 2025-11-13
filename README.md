@@ -1,37 +1,35 @@
-# 🎮 IoTtalk 體感飛機大戰遊戲 (Sky Fighter)
+# IoTtalk 體感飛機大戰遊戲 (Sky Fighter)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/itsYoga/sky_fighter)
 
-這是一個使用 **IoTtalk** 平台和手機體感控制器（類似 Joy-Con）來控制 Python Pygame 遊戲的創意專案！
+這是一個使用 **IoTtalk** 平台和手機體感控制器來控制 Python Pygame 遊戲的專案。
 
-## 📋 專案簡介
+## 專案簡介
 
 - **輸入端**: 使用 IoTtalk 的 **Smartphone** 功能（手機掃 QR Code），利用手機的 **Gyroscope (陀螺儀)** 發送數據
 - **伺服器**: IoTtalk 平台負責轉發數據
 - **輸出端**: Python 程式 (`Game.py`) 接收數據並控制 Pygame 遊戲中的飛機
 - **測試工具**: `test_tilt_data.py` 用於校準和測試感測器數據
 
-## ✨ 專案亮點
+## 專案亮點
 
 1. **整合度高**: 將 Web IoT 技術 (IoTtalk) 與本機應用程式 (Python/Pygame) 完美結合
 2. **即時性**: 使用多執行緒 (Multi-threading) 技術，將網路通訊與遊戲渲染分開，確保遊戲畫面流暢不卡頓
 3. **沉浸式體驗**: 利用手機陀螺儀模擬飛機操縱桿，提供鍵盤無法比擬的操作體驗
 
-## 📸 專案展示
+## 專案展示
 
 ### 遊戲主畫面
 ![遊戲主畫面](screenshot/game_homescreen.png)
 
 ### 遊戲遊玩演示視頻
-<video src="screenshot/gameplay.mov" controls width="800">
-  您的瀏覽器不支援視頻播放。請下載視頻文件查看：<a href="screenshot/gameplay.mov">gameplay.mov</a>
-</video>
+**注意**: GitHub 不支援直接播放 .mov 格式視頻，請下載查看：[gameplay.mov](screenshot/gameplay.mov)
 
 ### IoTtalk 設置截圖
 - **Device Model 設置**: ![IoTtalk Device Model](screenshot/iottalk_model.png)
 - **Global Function 設置**: ![Sky Fighter Function](screenshot/sky_fighter_function.png)
 
-## 🛠️ 環境準備
+## 環境準備
 
 ### 1. 安裝 Python 套件
 
@@ -63,7 +61,7 @@ Sky_Fighter_IoTtalk/
 └── README.md            # 本說明文件
 ```
 
-## 📱 IoTtalk 網頁設置步驟
+## IoTtalk 網頁設置步驟
 
 ### 步驟 1: 登入 IoTtalk
 
@@ -106,7 +104,7 @@ Sky_Fighter_IoTtalk/
 **提示**: 如果需要使用 Global Function（如 `sky_fighter`），可以在 Canvas 上添加 Function 節點，參考以下設置：
 ![Sky Fighter Function](screenshot/sky_fighter_function.png)
 
-## 🎮 執行遊戲
+## 執行遊戲
 
 ### 方法 1: 使用 DAI.py（推薦）
 
@@ -133,14 +131,14 @@ cd "/Users/jesse/Documents/School Work/AIoT/Sky_Fighter_IoTtalk"
 python3 Game.py
 ```
 
-## 🎯 遊戲操作
+## 遊戲操作
 
 1. **移動飛機**: 傾斜手機左右移動（手機向左傾 = 飛機向左，手機向右傾 = 飛機向右）
 2. **發射子彈**: **自動發射**（無需按鍵，遊戲開始後自動持續發射）
 3. **擊敗敵人**: 用子彈擊中敵人，每擊中一個得分
 4. **避免碰撞**: 不要讓敵人撞到你的飛機，否則遊戲結束
 
-## 🧪 感測器校準和測試
+## 感測器校準和測試
 
 在開始遊戲前，建議先運行測試工具來校準感測器：
 
@@ -149,7 +147,7 @@ cd "/Users/jesse/Documents/School Work/AIoT/Sky_Fighter_IoTtalk"
 python3 test_tilt_data.py
 ```
 
-### 測試步驟：
+### 測試步驟
 
 1. **保持手機水平 5 秒**（基準值 - 用於計算中間點）
 2. **向右傾斜到極限 8 秒**（盡可能向右傾斜）
@@ -158,14 +156,14 @@ python3 test_tilt_data.py
 5. **回到水平 3 秒**
 
 測試完成後，程式會自動顯示：
-- 🎯 中間點（基準值）
-- ➡️ 極右值（最大值）
-- ⬅️ 極左值（最小值）
-- 💡 Game.py 建議設定（可直接使用）
+- 中間點（基準值）
+- 極右值（最大值）
+- 極左值（最小值）
+- Game.py 建議設定（可直接使用）
 
 這些數值會自動更新到 `Game.py` 中，確保控制準確。
 
-## 🔧 疑難排解
+## 疑難排解
 
 ### 問題 1: 遊戲無法連線到 IoTtalk
 
@@ -201,7 +199,7 @@ python3 test_tilt_data.py
 - 降低 `Game.py` 中的 `FPS` 值（例如從 60 改成 30）
 - 增加 `iottalk_listener()` 中的 `time.sleep(0.05)` 值（例如改成 0.1）
 
-## 📸 展示建議
+## 展示建議
 
 在報告或展示時，建議包含以下內容：
 
@@ -211,7 +209,7 @@ python3 test_tilt_data.py
 4. **Global Function 設置** (`screenshot/sky_fighter_function.png`) - 展示數據處理函數配置
 5. **終端機輸出**: 顯示「Register successfully」和數據接收訊息，證明連線成功
 
-## 🚀 進階擴展
+## 進階擴展
 
 如果你想讓這個專案更進階，可以嘗試：
 
@@ -222,7 +220,7 @@ python3 test_tilt_data.py
 5. **分數排行榜**: 記錄最高分數
 6. **難度調整**: 根據分數動態調整敵人生成速度和數量
 
-## ⚙️ 技術細節
+## 技術細節
 
 ### 控制參數說明
 
@@ -239,7 +237,7 @@ Gyroscope 數據格式：`[[alpha, beta, gamma]]`
 - **Beta (β)**: 繞 X 軸旋轉（pitch）
 - **Gamma (γ)**: 繞 Y 軸旋轉（roll）- 用於左右傾斜控制
 
-## 📝 程式碼說明
+## 程式碼說明
 
 ### Game.py
 - 遊戲主程式，結合 Pygame 和 IoTtalk
@@ -260,20 +258,19 @@ Gyroscope 數據格式：`[[alpha, beta, gamma]]`
 - 提供 Game.py 的建議設定參數
 - 支援 Gyroscope 數據格式：`[[alpha, beta, gamma]]`
 
-## 📄 授權
+## 授權
 
 本專案僅供學習使用。
 
-## 👨‍💻 作者
+## 作者
 
 Jesse - AIoT Lab 5 專案
 
-## 🔗 相關連結
+## 相關連結
 
 - **GitHub 倉庫**: [https://github.com/itsYoga/sky_fighter](https://github.com/itsYoga/sky_fighter)
 - **IoTtalk 平台**: [https://class.iottalk.tw](https://class.iottalk.tw)
 
 ---
 
-**祝遊戲愉快！🎮✨**
-
+**祝遊戲愉快！**
