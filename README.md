@@ -2,7 +2,9 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/itsYoga/sky_fighter)
 
-這是一個使用 **IoTtalk** 平台和手機體感控制器來控制 Python Pygame 遊戲的專案。
+**Take-home Assignment: Using dummy devices to create an application**
+
+這是一個使用 **IoTtalk** 平台和手機體感控制器來控制 Python Pygame 遊戲的專案。透過 Dummy Device 接收手機 Gyroscope 數據，實現體感控制飛機大戰遊戲。
 
 ## 專案簡介
 
@@ -22,11 +24,11 @@
 ### 遊戲主畫面
 ![遊戲主畫面](screenshot/game_homescreen.png)
 
-### 遊戲遊玩演示視頻
+### 遊戲遊玩演示
 
-<video src="screenshot/gameplay.mp4" controls width="800">
-  您的瀏覽器不支援視頻播放。請下載查看：<a href="screenshot/gameplay.mp4">gameplay.mp4</a>
-</video>
+![遊戲遊玩演示](screenshot/gameplay.gif)
+
+**完整視頻**: [下載 gameplay.mp4](screenshot/gameplay.mp4)
 
 ### IoTtalk 設置截圖
 - **Device Model 設置**: ![IoTtalk Device Model](screenshot/iottalk_model.png)
@@ -267,7 +269,7 @@ Gyroscope 數據格式：`[[alpha, beta, gamma]]`
 
 ## 作者
 
-Jesse - AIoT Lab 5 專案
+Jesse - AIoT Take-home Assignment: Using dummy devices to create an application
 
 ## 相關連結
 
